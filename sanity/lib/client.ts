@@ -9,6 +9,6 @@ export const client = createClient({
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
   stega : {
     studioUrl: process.env.NODE_ENV === 'production'
-        ? `https://${process.env.VERCEL_URL}/studio` : `${process.env.NEXT_PUBLIC_BASE_URL}/studio`,
+        ? `https://${process.env.NEXT_PUBLIC_VERCEL_ENV}/studio` : `${process.env.NEXT_PUBLIC_BASE_URL}/studio`,
   }
 })

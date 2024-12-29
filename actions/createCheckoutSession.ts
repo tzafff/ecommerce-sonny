@@ -37,7 +37,7 @@ export async function createCheckoutSession(
             customerId = customers.data[0].id;
         }
         const baseUrl = process.env.NODE_ENV === 'production'
-            ? `https://${process.env.VERCEL_URL}`
+            ? `https://${process.env.NEXT_PUBLIC_VERCEL_ENV}`
             : `${process.env.NEXT_PUBLIC_BASE_URL}`
 
         const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`
