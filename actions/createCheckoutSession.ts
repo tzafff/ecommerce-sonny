@@ -41,7 +41,6 @@ export async function createCheckoutSession(
             : `${process.env.NEXT_PUBLIC_BASE_URL}`
 
         const successUrl = `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}&orderNumber=${metadata.orderNumber}`
-        console.log(successUrl)
         const cancelUrl = `${baseUrl}/basket`
 
         const session = await stripe.checkout.sessions.create({
